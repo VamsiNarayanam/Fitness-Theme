@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IronPulse Fitness — Premium gym and personal training. Train smarter, recover faster, and achieve results that last.">
+  <meta name="keywords" content="gym, fitness, personal training, HIIT, strength training, wellness, IronPulse">
+  <meta name="author" content="Stackly Fitness">
+  <meta name="theme-color" content="#050b1a">
+  <title>Stackly Fitness | Premium Gym &amp; Personal Training</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/preloader.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div id="preloader" class="preloader" role="status" aria-live="polite" aria-label="Page loading">
+    <div class="preloader__inner">
+      <img src="assets/stackly-fitness-logo.webp" alt="Stackly Fitness" class="preloader__logo" decoding="async">
+      <div class="preloader__progress-wrap">
+        <div class="preloader__progress-bar" id="preloader-progress-bar" aria-hidden="true"></div>
+      </div>
+      <span class="preloader__percent" id="preloader-percent" aria-label="Loading progress">0%</span>
+    </div>
+  </div>
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" hidden>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+  <aside class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation" aria-hidden="true" inert>
+    <div class="nav-drawer__header">
+      <a class="nav__brand nav-drawer__brand" href="index.html" aria-label="Stackly Digital Home">
+        <img
+          class="nav__logo"
+          src="assets/stackly-fitness-logo.webp"
+          alt="Stackly Fitness"
+          loading="eager"
+          decoding="async"
+        />
+      </a>
+      <button type="button" class="nav-drawer__close" id="nav-drawer-close" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="nav-drawer__list">
+      <li><a href="index.html" class="nav-drawer__link" data-nav="top">Home</a></li>
+      <li><a href="404.html" class="nav-drawer__link" data-nav="about">About</a></li>
+      <li><a href="404.html" class="nav-drawer__link" data-nav="programs">Programs</a></li>
+      <li><a href="404.html" class="nav-drawer__link" data-nav="blog">Insights</a></li>
+       <li><a href="404.html" class="nav-drawer__link" data-nav="testimonials">Contact</a></li>
+    </ul>
+    <a href="404.html" class="btn btn--primary btn--full nav-drawer__cta">Login</a>
+  </aside>
+
+  <header class="header" id="header">
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <div class="nav__container container">
+        <a class="nav__brand" href="index.html" aria-label="Stackly Digital Home">
+          <img
+            class="nav__logo"
+            src="assets/stackly-fitness-logo.webp"
+            alt="Stackly Fitness"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+
+        <ul class="nav__list" id="nav-list" role="menubar">
+          <li role="none"><a href="index.html" class="nav__link is-active" role="menuitem" data-nav="top">Home</a></li>
+          <li role="none"><a href="404.html" class="nav__link" role="menuitem" data-nav="about">About</a></li>
+          <li role="none"><a href="404.html" class="nav__link" role="menuitem" data-nav="programs">Programs</a></li>
+          <li role="none"><a href="404.html" class="nav__link" role="menuitem" data-nav="pricing">Insights</a></li>
+          <li role="none"><a href="404.html" class="nav__link" role="menuitem" data-nav="blog">Contact</a></li>
+
+        </ul>
+
+        <a href="404.html" class="btn btn--primary nav__cta">Login</a>
+
+        <button type="button" class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+          <span class="nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__video-wrap" aria-hidden="true">
+        <video class="hero__video" autoplay muted loop playsinline poster="assets/section-images/hero-poster.webp">
+          <source src="assets/Fitness-Hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero__overlay"></div>
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+      </div>
+
+      <div class="hero__layout container">
+        <div class="hero__content">
+          <p class="hero__eyebrow" data-aos="fade-up">Premium Gym &amp; Personal Training</p>
+          <h1 class="hero__title" id="hero-title" data-aos="fade-up" data-aos-delay="100">
+            Train <span class="text-gradient">Smarter</span>. Recover Faster.
+          </h1>
+          <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">
+            Results That Last. Elevate your strength, endurance, and recovery with elite coaching built for real life.
+          </p>
+          <div class="hero__actions" data-aos="fade-up" data-aos-delay="300">
+            <a href="404.html" class="btn btn--primary btn--lg">Start Free Trial</a>
+            <a href="404.html" class="btn btn--ghost btn--lg">Explore Programs</a>
+          </div>
+          <ul class="hero__brands" data-aos="fade-up" data-aos-delay="400" aria-label="Trusted by leading brands">
+            <li class="hero__brand-pill">Nike Training</li>
+            <li class="hero__brand-pill">WHOOP</li>
+            <li class="hero__brand-pill">MyFitnessPal</li>
+            <li class="hero__brand-pill">Garmin</li>
+          </ul>
+        </div>
+
+        <aside class="hero__stats-card" data-aos="fade-left" data-aos-delay="500" aria-label="Club highlights">
+          <div class="hero__stat">
+            <span class="hero__stat-value">12K+</span>
+            <span class="hero__stat-label">Active Members</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">98%</span>
+            <span class="hero__stat-label">Goal Completion</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">45+</span>
+            <span class="hero__stat-label">Expert Coaches</span>
+          </div>
+        </aside>
+      </div>
+
+    </section>
+
+   
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__media" data-aos="fade-right">
+          <figure class="about__figure">
+            <img
+              src="assets/About-Fitness.webp"
+              alt="Stackly certified coach guiding a member through strength training"
+              class="about__image"
+              width="600"
+              height="720"
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption class="about__overlay-card glass-panel">
+              <div class="about__overlay-stat">
+                <span class="about__overlay-value">15+</span>
+                <span class="about__overlay-label">Years Experience</span>
+              </div>
+              <div class="about__overlay-stat">
+                <span class="about__overlay-value">8,500+</span>
+                <span class="about__overlay-label">Members Trained</span>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="about__content" data-aos="fade-left">
+          <span class="section__eyebrow">About Stackly Fitness</span>
+          <h2 class="section__title" id="about-title">Built for Performance. Designed for You.</h2>
+          <p class="section__lead">
+            Stackly Fitness combines science-backed programming with premium facilities and hands-on coaching — so every session moves you closer to lasting results.
+          </p>
+          <ul class="about__features">
+            <li class="about__feature">
+              <span class="about__feature-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L15 8.5L22 9.5L17 14.5L18 22L12 18.5L6 22L7 14.5L2 9.5L9 8.5L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </span>
+              <div>
+                <h3 class="about__feature-title">Certified Coaches</h3>
+                <p class="about__feature-text">NSCA and ACE certified trainers with sport-specific expertise and continuous education.</p>
+              </div>
+            </li>
+            <li class="about__feature">
+              <span class="about__feature-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 6H20M4 12H14M4 18H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+              <div>
+                <h3 class="about__feature-title">Personalized Plans</h3>
+                <p class="about__feature-text">Custom macrocycles tailored to your goals, schedule, and recovery capacity.</p>
+              </div>
+            </li>
+            <li class="about__feature">
+              <span class="about__feature-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 20V4M7 20V10M11 20V14M15 20V8M19 20V12M23 20V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </span>
+              <div>
+                <h3 class="about__feature-title">Progress Tracking</h3>
+                <p class="about__feature-text">Real-time metrics, body composition scans, and weekly performance reviews.</p>
+              </div>
+            </li>
+          </ul>
+          <a href="404.html" class="btn btn--primary">See Our Process</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs section" id="programs" aria-labelledby="programs-title">
+      <div class="container">
+        <header class="section__header section__header--center" data-aos="fade-up">
+          <span class="section__eyebrow">Programs</span>
+          <h2 class="section__title" id="programs-title">Elite Training Paths</h2>
+          <p class="section__lead section__lead--center">
+            Six signature programs engineered for strength, speed, recovery, and sustainable transformation.
+          </p>
+        </header>
+
+        <div class="programs__grid">
+          <article class="program-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="program-card__media">
+              <img src="assets/Strength_training.webp" alt="Strength training session with barbell" loading="lazy" decoding="async" width="400" height="280">
+              <div class="program-card__glow" aria-hidden="true"></div>
+            </div>
+            <div class="program-card__body">
+              <div class="program-card__badges">
+                <span class="badge badge--difficulty">Advanced</span>
+                <span class="badge badge--duration">8 Weeks</span>
+              </div>
+              <h3 class="program-card__title">Strength Training</h3>
+              <p class="program-card__desc">Progressive overload systems to build lean muscle, power, and joint resilience.</p>
+              <a href="404.html" class="btn btn--ghost btn--full program-card__cta">Enroll Now</a>
+            </div>
+          </article>
+
+          <article class="program-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="program-card__media">
+              <img src="assets/Hiit.webp" alt="High-intensity interval training class" loading="lazy" decoding="async" width="400" height="280">
+              <div class="program-card__glow" aria-hidden="true"></div>
+            </div>
+            <div class="program-card__body">
+              <div class="program-card__badges">
+                <span class="badge badge--difficulty">Intermediate</span>
+                <span class="badge badge--duration">6 Weeks</span>
+              </div>
+              <h3 class="program-card__title">HIIT</h3>
+              <p class="program-card__desc">Metabolic conditioning circuits that torch fat and elevate cardiovascular capacity.</p>
+              <a href="404.html" class="btn btn--ghost btn--full program-card__cta">Enroll Now</a>
+            </div>
+          </article>
+
+          <article class="program-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="program-card__media">
+              <img src="assets/Yoga-studio.webp" alt="Yoga and mobility flow in studio" loading="lazy" decoding="async" width="400" height="280">
+              <div class="program-card__glow" aria-hidden="true"></div>
+            </div>
+            <div class="program-card__body">
+              <div class="program-card__badges">
+                <span class="badge badge--difficulty">All Levels</span>
+                <span class="badge badge--duration">Ongoing</span>
+              </div>
+              <h3 class="program-card__title">Yoga</h3>
+              <p class="program-card__desc">Mobility-focused flows to improve flexibility, breath control, and mental clarity.</p>
+              <a href="404.html" class="btn btn--ghost btn--full program-card__cta">Enroll Now</a>
+            </div>
+          </article>
+
+          <article class="program-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="program-card__media">
+              <img src="assets/Food-Fitness-Nutrition.webp" alt="Nutrition coaching with meal planning" loading="lazy" decoding="async" width="400" height="280">
+              <div class="program-card__glow" aria-hidden="true"></div>
+            </div>
+            <div class="program-card__body">
+              <div class="program-card__badges">
+                <span class="badge badge--difficulty">All Levels</span>
+                <span class="badge badge--duration">12 Weeks</span>
+              </div>
+              <h3 class="program-card__title">Nutrition Coaching</h3>
+              <p class="program-card__desc">Macro-balanced meal strategies and habit coaching for sustainable fueling.</p>
+              <a href="404.html" class="btn btn--ghost btn--full program-card__cta">Enroll Now</a>
+            </div>
+          </article>
+
+          <article class="program-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="program-card__media">
+              <img src="assets/personal-training.webp" alt="One-on-one personal training session" loading="lazy" decoding="async" width="400" height="280">
+              <div class="program-card__glow" aria-hidden="true"></div>
+            </div>
+            <div class="program-card__body">
+              <div class="program-card__badges">
+                <span class="badge badge--difficulty">Custom</span>
+                <span class="badge badge--duration">Flexible</span>
+              </div>
+              <h3 class="program-card__title">Personal Training</h3>
+              <p class="program-card__desc">Dedicated 1:1 coaching with form analysis, accountability, and adaptive programming.</p>
+              <a href="404.html" class="btn btn--ghost btn--full program-card__cta">Enroll Now</a>
+            </div>
+          </article>
+
+          <article class="program-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="program-card__media">
+              <img src="assets/Recovery-fitness.webp" alt="Recovery and mobility therapy session" loading="lazy" decoding="async" width="400" height="280">
+              <div class="program-card__glow" aria-hidden="true"></div>
+            </div>
+            <div class="program-card__body">
+              <div class="program-card__badges">
+                <span class="badge badge--difficulty">All Levels</span>
+                <span class="badge badge--duration">4 Weeks</span>
+              </div>
+              <h3 class="program-card__title">Recovery &amp; Mobility</h3>
+              <p class="program-card__desc">Foam rolling, contrast therapy, and corrective drills to accelerate recovery.</p>
+              <a href="404.html" class="btn btn--ghost btn--full program-card__cta">Enroll Now</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  
+    <section class="transformations section" id="transformations" aria-labelledby="transformations-title">
+      <div class="container">
+        <div class="outcomes__head" data-aos="fade-up">
+          <header class="outcomes__header">
+            <span class="section__eyebrow">Transformations</span>
+            <h2 class="section__title" id="transformations-title">Outcomes you can measure</h2>
+            <p class="section__lead outcomes__lead">
+              Highlights from recent member programs—strength, fat loss, and performance you can track.
+            </p>
+          </header>
+        </div>
+
+        <div class="outcomes-carousel" data-outcomes-carousel data-outcomes-loop data-autoplay="5000" aria-roledescription="carousel" aria-label="Member transformation results">
+          <div class="outcomes-carousel__viewport">
+            <div class="outcomes-carousel__track" data-outcomes-track>
+              <article class="outcome-card" data-outcomes-slide>
+                <figure class="outcome-card__media">
+                  <img src="assets/Marcus.webp" alt="Marcus Chen transformation result" loading="lazy" decoding="async" width="400" height="260">
+                </figure>
+                <div class="outcome-card__body">
+                  <ul class="outcome-card__tags" aria-label="Program tags">
+                    <li>Strength</li>
+                    <li>HIIT</li>
+                  </ul>
+                  <h3 class="outcome-card__title">Strength gains that stayed</h3>
+                  <p class="outcome-card__desc">Marcus Chen — 16 weeks of progressive lifting and metabolic conditioning with hands-on coaching.</p>
+                  <ul class="outcome-card__metrics" aria-label="Results">
+                    <li><span class="outcome-card__metric-value">-24 lbs</span><span class="outcome-card__metric-label">Weight</span></li>
+                    <li><span class="outcome-card__metric-value">+35%</span><span class="outcome-card__metric-label">Strength</span></li>
+                    <li><span class="outcome-card__metric-value">16 wks</span><span class="outcome-card__metric-label">Program</span></li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="outcome-card" data-outcomes-slide>
+                <figure class="outcome-card__media">
+                  <img src="assets/Sarah.webp" alt="Sarah Mitchell transformation result" loading="lazy" decoding="async" width="400" height="260">
+                </figure>
+                <div class="outcome-card__body">
+                  <ul class="outcome-card__tags" aria-label="Program tags">
+                    <li>Personal Training</li>
+                    <li>Nutrition</li>
+                  </ul>
+                  <h3 class="outcome-card__title">Nutrition that fueled every session</h3>
+                  <p class="outcome-card__desc">Sarah Mitchell — macro coaching and 1:1 training built for steady fat loss without burnout.</p>
+                  <ul class="outcome-card__metrics" aria-label="Results">
+                    <li><span class="outcome-card__metric-value">-18 lbs</span><span class="outcome-card__metric-label">Weight</span></li>
+                    <li><span class="outcome-card__metric-value">+28%</span><span class="outcome-card__metric-label">Strength</span></li>
+                    <li><span class="outcome-card__metric-value">12 wks</span><span class="outcome-card__metric-label">Program</span></li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="outcome-card" data-outcomes-slide>
+                <figure class="outcome-card__media">
+                  <img src="assets/David.webp" alt="David Okonkwo transformation result" loading="lazy" decoding="async" width="400" height="260">
+                </figure>
+                <div class="outcome-card__body">
+                  <ul class="outcome-card__tags" aria-label="Program tags">
+                    <li>HIIT</li>
+                    <li>Recovery</li>
+                  </ul>
+                  <h3 class="outcome-card__title">Peak shape at 42, injury-free</h3>
+                  <p class="outcome-card__desc">David Okonkwo — HIIT blocks paired with mobility and recovery work for durable performance.</p>
+                  <ul class="outcome-card__metrics" aria-label="Results">
+                    <li><span class="outcome-card__metric-value">-32 lbs</span><span class="outcome-card__metric-label">Weight</span></li>
+                    <li><span class="outcome-card__metric-value">+42%</span><span class="outcome-card__metric-label">Strength</span></li>
+                    <li><span class="outcome-card__metric-value">20 wks</span><span class="outcome-card__metric-label">Program</span></li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="outcome-card" data-outcomes-slide>
+                <figure class="outcome-card__media">
+                  <img src="assets/Elena.webp" alt="Elena Vasquez transformation result" loading="lazy" decoding="async" width="400" height="260">
+                </figure>
+                <div class="outcome-card__body">
+                  <ul class="outcome-card__tags" aria-label="Program tags">
+                    <li>Yoga</li>
+                    <li>Strength</li>
+                  </ul>
+                  <h3 class="outcome-card__title">Stronger with full mobility</h3>
+                  <p class="outcome-card__desc">Elena Vasquez — yoga and strength programming for lean muscle and better movement quality.</p>
+                  <ul class="outcome-card__metrics" aria-label="Results">
+                    <li><span class="outcome-card__metric-value">-15 lbs</span><span class="outcome-card__metric-label">Weight</span></li>
+                    <li><span class="outcome-card__metric-value">+22%</span><span class="outcome-card__metric-label">Strength</span></li>
+                    <li><span class="outcome-card__metric-value">14 wks</span><span class="outcome-card__metric-label">Program</span></li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="outcomes__nav">
+          <button type="button" class="slider__arrow outcomes__arrow" data-outcomes-prev aria-label="Previous result">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="slider__arrow outcomes__arrow" data-outcomes-next aria-label="Next result">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="process section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section__header section__header--center" data-aos="fade-up">
+          <span class="section__eyebrow">Our Process</span>
+          <h2 class="section__title" id="process-title">From Assessment to Achievement</h2>
+          <p class="section__lead section__lead--center">
+            A proven four-step framework that keeps you progressing safely and consistently.
+          </p>
+        </header>
+
+        <ol class="timeline" data-aos="fade-up">
+          <li class="timeline__item timeline__item--left">
+            <div class="timeline__content glass-panel">
+              <span class="timeline__tag">Step 01</span>
+              <h3 class="timeline__title">Assess</h3>
+              <p class="timeline__text">Movement screening, body composition analysis, and goal mapping with your lead coach.</p>
+            </div>
+            <div class="timeline__media">
+              <img src="assets/Fitness-Assessment.webp" alt="Fitness assessment and movement screening" loading="lazy" decoding="async" width="480" height="320">
+            </div>
+            <span class="timeline__node" aria-hidden="true"></span>
+          </li>
+          <li class="timeline__item timeline__item--right">
+            <div class="timeline__content glass-panel">
+              <span class="timeline__tag">Step 02</span>
+              <h3 class="timeline__title">Plan</h3>
+              <p class="timeline__text">Custom periodized program with nutrition guidelines and recovery protocols built in.</p>
+            </div>
+            <div class="timeline__media">
+              <img src="assets/Fitness-coach.webp" alt="Coach creating personalized training plan" loading="lazy" decoding="async" width="480" height="320">
+            </div>
+            <span class="timeline__node" aria-hidden="true"></span>
+          </li>
+          <li class="timeline__item timeline__item--left">
+            <div class="timeline__content glass-panel">
+              <span class="timeline__tag">Step 03</span>
+              <h3 class="timeline__title">Train</h3>
+              <p class="timeline__text">Execute sessions with real-time form cues, intensity adjustments, and accountability.</p>
+            </div>
+            <div class="timeline__media">
+              <img src="assets/Fitness-training.webp" alt="Member training with coach supervision" loading="lazy" decoding="async" width="480" height="320">
+            </div>
+            <span class="timeline__node" aria-hidden="true"></span>
+          </li>
+          <li class="timeline__item timeline__item--right">
+            <div class="timeline__content glass-panel">
+              <span class="timeline__tag">Step 04</span>
+              <h3 class="timeline__title">Track</h3>
+              <p class="timeline__text">Weekly check-ins, metric dashboards, and program refinements to ensure continuous progress.</p>
+            </div>
+            <div class="timeline__media">
+              <img src="assets/Fitness-track.webp" alt="Progress tracking on digital dashboard" loading="lazy" decoding="async" width="480" height="320">
+            </div>
+            <span class="timeline__node" aria-hidden="true"></span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="stats section" id="stats" aria-labelledby="stats-title">
+      <div class="container">
+        <header class="section__header section__header--center" data-aos="fade-up">
+          <span class="section__eyebrow">By the Numbers</span>
+          <h2 class="section__title" id="stats-title">Trusted by Thousands</h2>
+        </header>
+
+        <div class="stats__grid" data-aos="fade-up">
+          <div class="stats__counter">
+            <span class="stats__value" data-counter data-target="12500" data-suffix="+">0</span>
+            <span class="stats__label">Members</span>
+          </div>
+          <div class="stats__counter">
+            <span class="stats__value" data-counter data-target="48">0</span>
+            <span class="stats__label">Coaches</span>
+          </div>
+          <div class="stats__counter">
+            <span class="stats__value" data-counter data-target="185000" data-suffix="+">0</span>
+            <span class="stats__label">Sessions</span>
+          </div>
+          <div class="stats__counter">
+            <span class="stats__value" data-counter data-target="97" data-suffix="%">0</span>
+            <span class="stats__label">Success Rate</span>
+          </div>
+        </div>
+
+        <ul class="stats__features" data-aos="fade-up">
+          <li class="stats__feature">
+            <span class="stats__feature-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 15C15.866 15 19 11.866 19 8C19 4.134 15.866 1 12 1C8.134 1 5 4.134 5 8C5 11.866 8.134 15 12 15Z" stroke="currentColor" stroke-width="1.5"/><path d="M2 23C2 18.029 6.477 14 12 14C17.523 14 22 18.029 22 23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="stats__feature-title">Certified Professionals</h3>
+            <p class="stats__feature-text">Every coach holds nationally recognized certifications and ongoing CE credits.</p>
+          </li>
+          <li class="stats__feature">
+            <span class="stats__feature-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="stats__feature-title">Proven Methodology</h3>
+            <p class="stats__feature-text">Evidence-based programming backed by sports science and performance data.</p>
+          </li>
+          <li class="stats__feature">
+            <span class="stats__feature-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M4 19V5M8 19V11M12 19V15M16 19V9M20 19V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="stats__feature-title">Transparent Results</h3>
+            <p class="stats__feature-text">Track every metric with our member portal and quarterly progress reports.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="showreel section" id="showreel" aria-labelledby="showreel-title">
+      <div class="container">
+        <header class="section__header showreel__header" data-aos="fade-up">
+          <span class="section__eyebrow">Experience</span>
+          <h2 class="section__title" id="showreel-title">Everything included in your membership</h2>
+          <p class="section__lead showreel__header-lead">
+            Train in a flagship facility built for strength, recovery, and measurable progress—not just access to machines.
+          </p>
+        </header>
+
+        <div class="showreel__wrap" data-aos="fade-up">
+          <div class="showreel__card glass-panel">
+            <video
+              class="showreel__video"
+              id="showreel-video"
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            >
+              <source src="assets/Cycle_fit.mp4" type="video/mp4">
+            </video>
+            <span class="showreel__badge">Facility tour</span>
+            <div class="showreel__controls" aria-label="Video controls">
+              <button type="button" class="showreel__control-btn showreel__control-btn--play" id="showreel-play-btn" aria-label="Play facility tour video">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5V19L19 12L8 5Z"/></svg>
+                <span class="showreel__control-label">Play</span>
+              </button>
+              <button type="button" class="showreel__control-btn showreel__control-btn--pause" id="showreel-pause-btn" aria-label="Pause facility tour video" disabled>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5H10V19H6V5ZM14 5H18V19H14V5Z"/></svg>
+                <span class="showreel__control-label">Pause</span>
+              </button>
+            </div>
+          </div>
+
+          <aside class="showreel__panel glass-panel" data-showreel-panel>
+            <p class="showreel__panel-eyebrow">What you&rsquo;ll get</p>
+            <h3 class="showreel__panel-title">Premium spaces. Real coaching. Zero guesswork.</h3>
+            <p class="showreel__panel-lead">Every plan unlocks the full IronPulse experience—equipment, recovery, and support under one roof.</p>
+
+            <ul class="showreel__benefits" role="list">
+              <li class="showreel__benefit is-active" data-showreel-benefit tabindex="0" role="button">
+                <span class="showreel__benefit-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 4H18V8H6V4ZM5 8H19L20 20H4L5 8ZM9 11V17M15 11V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <div class="showreel__benefit-text">
+                  <h4 class="showreel__benefit-title">Olympic lifting zone</h4>
+                  <p class="showreel__benefit-desc">Platforms, bumper plates, and bars with coach oversight for safe PRs.</p>
+                </div>
+              </li>
+              <li class="showreel__benefit" data-showreel-benefit tabindex="0" role="button">
+                <span class="showreel__benefit-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 14C4 10.686 6.686 8 10 8H14C17.314 8 20 10.686 20 14V16H4V14Z" stroke="currentColor" stroke-width="1.5"/><path d="M8 16V18M16 16V18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <div class="showreel__benefit-text">
+                  <h4 class="showreel__benefit-title">Recovery lounge</h4>
+                  <p class="showreel__benefit-desc">Foam rolling, contrast therapy, and stretch zones to bounce back faster.</p>
+                </div>
+              </li>
+              <li class="showreel__benefit" data-showreel-benefit tabindex="0" role="button">
+                <span class="showreel__benefit-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19V5M8 19V10M12 19V14M16 19V8M20 19V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <div class="showreel__benefit-text">
+                  <h4 class="showreel__benefit-title">Performance lab</h4>
+                  <p class="showreel__benefit-desc">Body composition scans, strength testing, and data-driven program tweaks.</p>
+                </div>
+              </li>
+              <li class="showreel__benefit" data-showreel-benefit tabindex="0" role="button">
+                <span class="showreel__benefit-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 4H17L19 9V20H5V9L7 4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12H15M9 16H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <div class="showreel__benefit-text">
+                  <h4 class="showreel__benefit-title">Group studios</h4>
+                  <p class="showreel__benefit-desc">HIIT, yoga, and cycle classes with capped attendance for quality coaching.</p>
+                </div>
+              </li>
+              <li class="showreel__benefit" data-showreel-benefit tabindex="0" role="button">
+                <span class="showreel__benefit-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 10H20M6 6H18M6 14H14M6 18H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <div class="showreel__benefit-text">
+                  <h4 class="showreel__benefit-title">Nutrition bar</h4>
+                  <p class="showreel__benefit-desc">Post-workout shakes, hydration, and macro-friendly grab-and-go options.</p>
+                </div>
+              </li>
+              <li class="showreel__benefit" data-showreel-benefit tabindex="0" role="button">
+                <span class="showreel__benefit-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 18V6M8 10L12 6L16 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 18H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </span>
+                <div class="showreel__benefit-text">
+                  <h4 class="showreel__benefit-title">Member app &amp; tracking</h4>
+                  <p class="showreel__benefit-desc">Log workouts, book sessions, and review progress reports from your phone.</p>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="showreel__perks" aria-label="Membership highlights">
+              <li class="showreel__perk">
+                <span class="showreel__perk-value">24/7</span>
+                <span class="showreel__perk-label">Member access</span>
+              </li>
+              <li class="showreel__perk">
+                <span class="showreel__perk-value">1 wk</span>
+                <span class="showreel__perk-label">Free trial</span>
+              </li>
+              <li class="showreel__perk">
+                <span class="showreel__perk-value">48</span>
+                <span class="showreel__perk-label">Expert coaches</span>
+              </li>
+            </ul>
+
+            <div class="showreel__actions">
+              <a href="404.html" class="btn btn--primary btn--full">Start Free Trial</a>
+              <a href="404.html" class="btn btn--ghost btn--full">Compare plans</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  
+    <section class="pricing section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <header class="section__header section__header--center" data-aos="fade-up">
+          <span class="section__eyebrow">Membership</span>
+          <h2 class="section__title" id="pricing-title">Invest in Your Best Self</h2>
+          <p class="section__lead section__lead--center">Flexible plans with no hidden fees. Cancel anytime with 30-day notice.</p>
+
+          <div class="pricing__toggle" role="group" aria-label="Billing period">
+            <button type="button" class="pricing__toggle-btn is-active" id="pricing-monthly" data-pricing="monthly" aria-pressed="true">Monthly</button>
+            <button type="button" class="pricing__toggle-btn" id="pricing-annual" data-pricing="annual" aria-pressed="false">Annual <span class="pricing__save">Save 20%</span></button>
+          </div>
+        </header>
+
+        <div class="pricing__grid" data-aos="fade-up">
+          <article class="pricing-card glass-panel" data-plan="starter">
+            <header class="pricing-card__header">
+              <h3 class="pricing-card__name">Starter</h3>
+              <p class="pricing-card__desc">Essential access for self-directed athletes.</p>
+              <div class="pricing-card__price">
+                <span class="pricing-card__amount" data-price-monthly="49" data-price-annual="39">$49</span>
+                <span class="pricing-card__period">/month</span>
+              </div>
+            </header>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature pricing-card__feature--included">Gym floor access</li>
+              <li class="pricing-card__feature pricing-card__feature--included">Locker &amp; showers</li>
+              <li class="pricing-card__feature pricing-card__feature--included">2 group classes / week</li>
+              <li class="pricing-card__feature">Personal training sessions</li>
+              <li class="pricing-card__feature">Nutrition coaching</li>
+              <li class="pricing-card__feature">Recovery lounge</li>
+            </ul>
+            <a href="404.html" class="btn btn--ghost btn--full">Get Started</a>
+          </article>
+
+          <article class="pricing-card pricing-card--featured glass-panel" data-plan="pro">
+            <span class="pricing-card__badge">Most Popular</span>
+            <header class="pricing-card__header">
+              <h3 class="pricing-card__name">Pro</h3>
+              <p class="pricing-card__desc">Full coaching support for serious progress.</p>
+              <div class="pricing-card__price">
+                <span class="pricing-card__amount" data-price-monthly="99" data-price-annual="79">$99</span>
+                <span class="pricing-card__period">/month</span>
+              </div>
+            </header>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature pricing-card__feature--included">Unlimited gym access</li>
+              <li class="pricing-card__feature pricing-card__feature--included">Unlimited group classes</li>
+              <li class="pricing-card__feature pricing-card__feature--included">4 PT sessions / month</li>
+              <li class="pricing-card__feature pricing-card__feature--included">Nutrition check-ins</li>
+              <li class="pricing-card__feature pricing-card__feature--included">Progress tracking app</li>
+              <li class="pricing-card__feature">Recovery lounge</li>
+            </ul>
+            <a href="404.html" class="btn btn--primary btn--full">Start Free Trial</a>
+          </article>
+
+          <article class="pricing-card glass-panel" data-plan="elite">
+            <header class="pricing-card__header">
+              <h3 class="pricing-card__name">Elite</h3>
+              <p class="pricing-card__desc">White-glove coaching for peak performers.</p>
+              <div class="pricing-card__price">
+                <span class="pricing-card__amount" data-price-monthly="179" data-price-annual="143">$179</span>
+                <span class="pricing-card__period">/month</span>
+              </div>
+            </header>
+            <ul class="pricing-card__features">
+              <li class="pricing-card__feature pricing-card__feature--included">Everything in Pro</li>
+              <li class="pricing-card__feature pricing-card__feature--included">12 PT sessions / month</li>
+              <li class="pricing-card__feature pricing-card__feature--included">Dedicated nutrition coach</li>
+              <li class="pricing-card__feature pricing-card__feature--included">Recovery lounge unlimited</li>
+              <li class="pricing-card__feature pricing-card__feature--included">Priority booking</li>
+              <li class="pricing-card__feature pricing-card__feature--included">Quarterly body scan</li>
+            </ul>
+            <a href="404.html" class="btn btn--ghost btn--full">Go Elite</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="testimonials section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section__header section__header--center" data-aos="fade-up">
+          <span class="section__eyebrow">Testimonials</span>
+          <h2 class="section__title" id="testimonials-title">What Members Say</h2>
+        </header>
+
+        <div class="slider testimonials-slider" id="testimonials-slider" data-slider data-autoplay="5000" aria-roledescription="carousel" aria-label="Member testimonials">
+          <div class="slider__track" data-slider-track>
+            <article class="slider__slide testimonial-slide is-active glass-panel" data-slider-slide>
+              <div class="testimonial-slide__header">
+                <img src="assets/fit-test1.webp" alt="" class="testimonial-slide__avatar" width="64" height="64" loading="lazy" decoding="async">
+                <div>
+                  <h3 class="testimonial-slide__name">Jessica Rivera</h3>
+                  <div class="testimonial-slide__rating" aria-label="5 out of 5 stars">
+                    <span aria-hidden="true">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+              <blockquote class="testimonial-slide__review">
+                <p>The Pro plan transformed my relationship with fitness. Coaches actually listen and adapt when life gets busy.</p>
+              </blockquote>
+            </article>
+
+            <article class="slider__slide testimonial-slide glass-panel" data-slider-slide hidden>
+              <div class="testimonial-slide__header">
+                <img src="assets/fit-test2.webp" alt="" class="testimonial-slide__avatar" width="64" height="64" loading="lazy" decoding="async">
+                <div>
+                  <h3 class="testimonial-slide__name">James Patterson</h3>
+                  <div class="testimonial-slide__rating" aria-label="5 out of 5 stars">
+                    <span aria-hidden="true">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+              <blockquote class="testimonial-slide__review">
+                <p>Best gym I&rsquo;ve ever joined. Equipment is top-tier and the community keeps you accountable without ego.</p>
+              </blockquote>
+            </article>
+
+            <article class="slider__slide testimonial-slide glass-panel" data-slider-slide hidden>
+              <div class="testimonial-slide__header">
+                <img src="assets/fit-test3.webp" alt="" class="testimonial-slide__avatar" width="64" height="64" loading="lazy" decoding="async">
+                <div>
+                  <h3 class="testimonial-slide__name">Jack Thompson</h3>
+                  <div class="testimonial-slide__rating" aria-label="5 out of 5 stars">
+                    <span aria-hidden="true">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+              <blockquote class="testimonial-slide__review">
+                <p>As a beginner I was nervous. The team made me feel capable from day one. Six months in and I&rsquo;m hooked.</p>
+              </blockquote>
+            </article>
+
+            <article class="slider__slide testimonial-slide glass-panel" data-slider-slide hidden>
+              <div class="testimonial-slide__header">
+                <img src="assets/fit-test4.webp" alt="" class="testimonial-slide__avatar" width="64" height="64" loading="lazy" decoding="async">
+                <div>
+                  <h3 class="testimonial-slide__name">Ryan O&rsquo;Brien</h3>
+                  <div class="testimonial-slide__rating" aria-label="5 out of 5 stars">
+                    <span aria-hidden="true">★★★★★</span>
+                  </div>
+                </div>
+              </div>
+              <blockquote class="testimonial-slide__review">
+                <p>Elite membership is worth every penny. Recovery lounge alone has cut my soreness in half.</p>
+              </blockquote>
+            </article>
+          </div>
+
+          <div class="slider__controls">
+            <button type="button" class="slider__arrow slider__arrow--prev" data-slider-prev aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="slider__dots" data-slider-dots role="tablist" aria-label="Testimonial slides"></div>
+            <button type="button" class="slider__arrow slider__arrow--next" data-slider-next aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <div class="slider__progress" aria-hidden="true">
+            <div class="slider__progress-bar" data-slider-progress></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <section class="blog section" id="blog" aria-labelledby="blog-title">
+      <div class="container">
+        <header class="section__header section__header--center" data-aos="fade-up">
+          <span class="section__eyebrow">Insights</span>
+          <h2 class="section__title" id="blog-title">Training Intelligence</h2>
+          <p class="section__lead section__lead--center">Expert articles on strength, recovery, nutrition, and mindset.</p>
+        </header>
+
+        <div class="blog__grid">
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="0">
+            <a href="404.html" class="blog-card__link">
+              <div class="blog-card__media">
+                <img src="assets/Athlete-deadlift.webp" alt="Athlete performing deadlift with proper form" loading="lazy" decoding="async" width="400" height="240">
+                <span class="blog-card__category">Strength</span>
+              </div>
+              <div class="blog-card__body">
+                <time class="blog-card__date" datetime="2026-05-15">May 15, 2026</time>
+                <h3 class="blog-card__title">The Science of Progressive Overload</h3>
+                <p class="blog-card__desc">How to structure volume and intensity for continuous strength gains without plateaus.</p>
+                <span class="blog-card__read">Read Article →</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+            <a href="404.html" class="blog-card__link">
+              <div class="blog-card__media">
+                <img src="assets/Recovery-Foam-Rolling.webp" alt="Person in recovery lounge with foam roller" loading="lazy" decoding="async" width="400" height="240">
+                <span class="blog-card__category">Recovery</span>
+              </div>
+              <div class="blog-card__body">
+                <time class="blog-card__date" datetime="2026-05-08">May 8, 2026</time>
+                <h3 class="blog-card__title">Sleep &amp; Recovery: The Missing PR</h3>
+                <p class="blog-card__desc">Why rest days and sleep hygiene matter as much as your heaviest training days.</p>
+                <span class="blog-card__read">Read Article →</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+            <a href="404.html" class="blog-card__link">
+              <div class="blog-card__media">
+                <img src="assets/Food-Fitness-Nutrition.webp" alt="Healthy meal prep containers for athletes" loading="lazy" decoding="async" width="400" height="240">
+                <span class="blog-card__category">Nutrition</span>
+              </div>
+              <div class="blog-card__body">
+                <time class="blog-card__date" datetime="2026-04-28">Apr 28, 2026</time>
+                <h3 class="blog-card__title">Fuel Your Workouts: Macro Basics</h3>
+                <p class="blog-card__desc">A practical guide to protein, carbs, and fats for gym performance and body composition.</p>
+                <span class="blog-card__read">Read Article →</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section__header section__header--center" data-aos="fade-up">
+          <span class="section__eyebrow">FAQ</span>
+          <h2 class="section__title" id="faq-title">Common Questions</h2>
+        </header>
+
+        <div class="faq__list" data-aos="fade-up">
+          <details class="faq__item glass-panel">
+            <summary class="faq__question">What is included in membership?</summary>
+            <div class="faq__answer">
+              <p>All memberships include full gym access, locker facilities, and member app access. Higher tiers add group classes, personal training sessions, nutrition coaching, and recovery lounge privileges. See our pricing section for a full feature comparison.</p>
+            </div>
+          </details>
+
+          <details class="faq__item glass-panel">
+            <summary class="faq__question">What is your cancellation policy?</summary>
+            <div class="faq__answer">
+              <p>Members may cancel with 30 days written notice. Annual plans receive a prorated refund on unused months when cancelled within the first 90 days. No cancellation fees apply to monthly memberships after the initial commitment period.</p>
+            </div>
+          </details>
+
+          <details class="faq__item glass-panel">
+            <summary class="faq__question">Is stackly fitness beginner friendly?</summary>
+            <div class="faq__answer">
+              <p>Absolutely. Every new member receives a complimentary assessment and orientation. Our coaches specialize in progressive introductions to strength training, and beginner-friendly classes run daily across all studios.</p>
+            </div>
+          </details>
+
+          <details class="faq__item glass-panel">
+            <summary class="faq__question">Do you offer a free trial?</summary>
+            <div class="faq__answer">
+              <p>Yes. New members get their first week free with full access to the gym, group studios, and member app. No credit card is required to start the trial—just sign up and book your complimentary assessment to get started.</p>
+            </div>
+          </details>
+
+          <details class="faq__item glass-panel">
+            <summary class="faq__question">Do I need to book classes in advance?</summary>
+            <div class="faq__answer">
+              <p>Group classes can be reserved through the member app up to 7 days ahead. Walk-ins are welcome when space allows. Personal training and recovery sessions must be booked with your coach at least 24 hours in advance.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section" id="cta" aria-labelledby="cta-title">
+      <div class="container cta__grid">
+        <div class="cta__copy" data-aos="fade-right">
+          <span class="section__eyebrow">Start Today</span>
+          <h2 class="section__title" id="cta-title">Your Transformation Starts Now</h2>
+          <p class="section__lead">
+            Join Stackly Fitness and get your first week free. No credit card required for the trial — just show up ready to work.
+          </p>
+          <br>
+          <a href="404.html" class="btn btn--primary btn--lg">Join Today</a>
+        </div>
+        <aside class="cta__card glass-panel" data-aos="fade-left" aria-label="Membership benefits checklist">
+          <h3 class="cta__card-title">Your Free Trial Includes</h3>
+          <ul class="cta__checklist">
+            <li class="cta__check-item">Full facility access for 7 days</li>
+            <li class="cta__check-item">Complimentary fitness assessment</li>
+            <li class="cta__check-item">2 group classes of your choice</li>
+            <li class="cta__check-item">1 personal training session</li>
+            <li class="cta__check-item">Nutrition consultation</li>
+            <li class="cta__check-item">Member app &amp; progress tracking</li>
+          </ul>
+          <a href="404.html" class="btn btn--primary btn--full">Start Free Trial</a>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="nav__brand footer__brand-link" href="index.html" aria-label="Stackly Digital Home">
+          <img
+            class="nav__logo"
+            src="assets/stackly-fitness-logo.webp"
+            alt="Fitness"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+        <p class="footer__desc">Train Smarter. Recover Faster. Results That Last. Premium gym and personal training for athletes at every level.</p>
+        <ul class="footer__social" aria-label="Social media links">
+          <li>
+            <a href="404.html" class="footer__social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="404.html" class="footer__social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 2H15C12.2386 2 10 4.23858 10 7V10H7V14H10V22H14V14H17L18 10H14V7.5C14 6.67157 14.6716 6 15.5 6H18V2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="404.html" class="footer__social-link" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 12C22 12 21.5 8.5 20 7C18.5 5.5 12 5.5 12 5.5C12 5.5 5.5 5.5 4 7C2.5 8.5 2 12 2 12C2 12 2.5 15.5 4 17C5.5 18.5 12 18.5 12 18.5C12 18.5 18.5 18.5 20 17C21.5 15.5 22 12 22 12Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 15L15 12L10 9V15Z" fill="currentColor"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="404.html" class="footer__social-link" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4L10.5 12.5L4 20H6L11 14L15 20H20L13 11L19 4H17L12.5 9.5L9 4H4Z" fill="currentColor"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="footer__col" aria-label="Quick links">
+        <h3 class="footer__col-title">Quick Links</h3>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="404.html">About</a></li>
+          <li><a href="404.html">Programs</a></li>
+          <li><a href="404.html">Insights</a></li>
+          <li><a href="404.html">Contact</a></li>
+      
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="Programs links">
+        <h3 class="footer__col-title">Programs</h3>
+        <ul class="footer__links">
+          <li><a href="404.html">Strength Training</a></li>
+          <li><a href="404.html">Yoga Training</a></li>
+          <li><a href="404.html">Nutrition Coaching</a></li>
+          <li><a href="404.html">Personal Training</a></li>
+          <li><a href="404.html">Recovery &amp; Mobility</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col footer__newsletter">
+        <h3 class="footer__col-title">Newsletter</h3>
+        <p class="footer__newsletter-text">Get training tips and exclusive offers delivered weekly.</p>
+        <form class="footer__form" id="newsletter-form" novalidate>
+          <label for="newsletter-email" class="visually-hidden">Email address</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="email"
+            class="footer__input"
+            placeholder="you@email.com"
+            required
+            autocomplete="email"
+            aria-describedby="newsletter-message"
+          >
+          <button type="submit" class="btn btn--primary btn--full">Subscribe</button>
+          <p class="footer__form-message" id="newsletter-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copyright">&copy; <span id="footer-year"></span> Stackly Fitness. All rights reserved.</p>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="js/preloader.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
+
+
+
